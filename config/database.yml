@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: adenio_production
-  username: adenio
+  username: deploy
   password: <%= ENV['ADENIO_DATABASE_PASSWORD'] %>
