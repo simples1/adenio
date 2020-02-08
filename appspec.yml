@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/pisirpaylas/deployment
+    destination: /home/deploy/adenio/releases
 permissions:
   - object: /var/www/pisirpaylas/deployment
-    owner: nginx
-    group: nginx
+    owner: deploy
+    group: deploy
     pattern: "*"
     mode: 775
     type:
