@@ -3,12 +3,6 @@ os: linux
 files:
   - source: /
     destination: /home/deploy/adenio/releases/adenio
-permissions:
-  - object: /home/deploy/adenio/releases/adenio
-    owner: deploy
-    group: deploy
-    pattern: "*"
-    mode: 775
 hooks:
   AfterInstall:
     - location: deployment_scripts/after_intall.sh
