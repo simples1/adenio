@@ -2,16 +2,13 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/deploy/adenio/releases
+    destination: /home/deploy/adenio/releases/adenio
 permissions:
-  - object: /home/deploy/adenio/releases
+  - object: /home/deploy/adenio/releases/adenio
     owner: deploy
     group: deploy
     pattern: "*"
     mode: 775
-    type:
-      - file
-      - directory
 hooks:
   AfterInstall:
     - location: deployment_scripts/after_intall.sh
