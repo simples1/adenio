@@ -1,5 +1,5 @@
 #!/bin/bash
-/bin/bash --login
+source /home/deploy/.profile
 cd /home/deploy/adenio/current
 echo $(pwd) > ppp.rb
 echo $(whoami) > user.rb
