@@ -9,5 +9,6 @@ RAILS_ENV=production bundle exec rake assets:precompile
 
 datetimestamp=$(date +%Y%m%d%H%M%S)
 mv /home/deploy/adenio/releases/adenio/ /home/deploy/adenio/releases/$datetimestamp
-rm current
+
+cd /home/deploy/adenio
 sudo ln -sfn /home/deploy/adenio/releases/$datetimestamp current
