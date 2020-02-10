@@ -16,6 +16,6 @@ if [ -d "$FOLDER" ]; then
 fi
 
 cd /home/deploy/adenio/current
-RAILS_ENV=production bundle install --path vendor/bundle
+RAILS_ENV=production bundle install --path /home/deploy/adenio/shared/bundle
 RAILS_ENV=production bundle exec rake db:migrate
 RAILS_ENV=production bundle exec rake assets:precompile
