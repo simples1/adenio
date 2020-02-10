@@ -21,6 +21,3 @@ fi
 
 cd /home/deploy/adenio/current cd
 RAILS_ENV=production bundle exec rake assets:precompile
-
-mv /home/deploy/adenio/releases/adenio/ /home/deploy/adenio/releases/$datetimestamp
-
