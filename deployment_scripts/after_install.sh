@@ -19,5 +19,5 @@ if [ -f "$FOLDER" ]; then
   sudo ln -sfn /home/deploy/adenio/releases/$datetimestamp/vendor bundle
 fi
 
-cd /home/deploy/adenio/current cd
+cd /home/deploy/adenio/current
 RAILS_ENV=production bundle exec rake assets:precompile
