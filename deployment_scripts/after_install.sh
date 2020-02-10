@@ -9,10 +9,6 @@ mv /home/deploy/adenio/releases/adenio/ /home/deploy/adenio/releases/$datetimest
 cd /home/deploy/adenio
 sudo ln -sfn /home/deploy/adenio/releases/$datetimestamp current
 
-cd /home/deploy/adenio/current
-RAILS_ENV=production bundle install --path vendor/bundle
-RAILS_ENV=production bundle exec rake db:migrate
-
 FOLDER=/home/deploy/adenio/shared/bundle/
 if [ -d "$FOLDER" ]; then
   cd /home/deploy/adenio/current/vendor
@@ -20,4 +16,6 @@ if [ -d "$FOLDER" ]; then
 fi
 
 cd /home/deploy/adenio/current
+RAILS_ENV=production bundle install --path vendor/bundle
+RAILS_ENV=production bundle exec rake db:migrate
 RAILS_ENV=production bundle exec rake assets:precompile
