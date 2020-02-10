@@ -6,7 +6,7 @@ PATH=/home/deploy/.rbenv/plugins/ruby-build/bin:/home/deploy/.rbenv/shims:/home/
 datetimestamp=$(date +%Y%m%d%H%M%S)
 mv /home/deploy/adenio/releases/adenio/ /home/deploy/adenio/releases/$datetimestamp
 
-chown deploy:deploy releases
+sudo chown -R deploy:deploy /home/deploy/adenio
 
 cd /home/deploy/adenio
 sudo ln -sfn /home/deploy/adenio/releases/$datetimestamp current
