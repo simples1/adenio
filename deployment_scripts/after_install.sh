@@ -7,6 +7,7 @@ RAILS_ENV=production bundle install --path vendor/bundle
 RAILS_ENV=production bundle exec rake db:migrate
 RAILS_ENV=production bundle exec rake assets:precompile
 
-mv /home/deploy/adenio/releases/adenio/ /home/deploy/adenio/releases/$(date +%Y%m%d%H%M%S)
+datetimestamp=$(date +%Y%m%d%H%M%S)
+mv /home/deploy/adenio/releases/adenio/ /home/deploy/adenio/releases/$datetimestamp
 rm current
-sudo ln -sfn /home/deploy/adenio/releases/$(date +%Y%m%d%H%M%S) current
+sudo ln -sfn /home/deploy/adenio/releases/$datetimestamp current
