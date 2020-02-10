@@ -2,8 +2,8 @@
 PATH=/home/deploy/.rbenv/plugins/ruby-build/bin:/home/deploy/.rbenv/shims:/home/deploy/.rbenv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 FILE=/home/deploy/adenio/shared/tmp/sockets/adenio-puma.sock
-if [ -f "$FILE" ]; then
-  rm /home/deploy/adenio/shared/tmp/sockets/*
+if [ -e "$FILE" ]; then
+  rm $FILE
 fi
 
 cd /home/deploy/adenio/current
